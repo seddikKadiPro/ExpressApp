@@ -6,11 +6,11 @@ const app=express();
 app.use(morgan('combine'));
 app.use(bodyParser());
 app.use(cors());
-app.get('/home',(req,res)=>{
+app.post('/register',(req,res)=>{
 
 	res.send({
 
-		message:'hello world !!!'
+		message:`Hello ${req.body.email}!  your user is registred !!!`
 
 	});
 })
